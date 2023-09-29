@@ -51,6 +51,40 @@ export const categories = [
     id: 3,
     im: "../images/computers.jpg",
     title: "LAPTOP & ACCESSORIES",  
+  },    
+]
+
+export const popularProducts = [
+  {
+    id: 1,
+    im: "../images/coat1.png",     
   },
-    
+  {
+    id: 2,
+    im: "../images/phones.jpg",     
+  },
+  {
+    id: 3,
+    im: "../images/computers.jpg",      
+  },
+  {
+    id: 4,
+    im: "../images/coat1.png",     
+  },
+  {
+    id: 5,
+    im: "../images/phones.jpg",     
+  },
+  {
+    id: 6,
+    im: "../images/computers.jpg",      
+  },
+  {
+    id: 7,
+    im: "../images/coat1.png",     
+  },
+  {
+    id: 8,
+    im: "../images/phones.jpg",     
+  },        
 ]

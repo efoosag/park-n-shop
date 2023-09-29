@@ -40,7 +40,6 @@ const Button = styled.button`
   font-weight: 600;
 ;
 `
-
 const CategoryItem = ({ item }) => {
   return (
     <Container>
