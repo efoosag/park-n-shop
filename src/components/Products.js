@@ -10,15 +10,22 @@ const Container = styled.div`
   justify-content: space-between;
 `
 
+const Title = styled.h2`
+  margin: 10px 25px;
+`
+
 const Products = () => {
   return (
-    <Container>
+    <>
+      <Title>Products</Title>
+      <Container>      
       {
         popularProducts.map(item => (
           <Product key={item.id} item={item} />
         ))
       }
     </Container>
+    </>    
   )
 }
 

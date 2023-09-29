@@ -8,14 +8,21 @@ display: flex;
 padding: 10px;
 
 `
+const Title = styled.h2`
+  margin: 10px 25px;
+`
 
 const Categories = () => {
   return (
-    <Container>
+    <>
+      <Title>Categories</Title>
+      <Container>
       {categories.map((item) => (
         <CategoryItem key={item.id} item={item}/>
       ))}
     </Container>
+    </>
+    
   )
 }
 
