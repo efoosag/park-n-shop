@@ -75,13 +75,13 @@ const Button = styled.button`
 `
 
 const Slider = () => {
-  const [slideIndex, setSlideIndex] = useState(0)
+  const [slideindex, setSlideIndex] = useState(0)
 
   const handleSlide = (direction) => {
     if (direction === "left") {
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 4 )
+      setSlideIndex(slideindex > 0 ? slideindex - 1 : 4 )
     } else {
-      setSlideIndex(slideIndex < 4 ? slideIndex + 1 : 0)
+      setSlideIndex(slideindex < 4 ? slideindex + 1 : 0)
     }
   } 
 
@@ -90,9 +90,9 @@ const Slider = () => {
       <Arrow direction="left" onClick={() => handleSlide("left")}>
         <ArrowLeftOutlined sx={{ fontSize: 40 }}/>
       </Arrow>
-      <Wrapper slideIndex={slideIndex}>
+      <Wrapper slideIndex={slideindex}>
         {slideItems.map((slideItem) => (
-          <Slide bg={slideItem.bg}>
+          <Slide bg={slideItem.bg} key={slideItem.id}>
             <ImgContainer>            
               <Image src={slideItem.im}/>
             </ImgContainer>

@@ -35,3 +35,22 @@ export const slideItems = [
     bg: "f5fafd",
   }
 ]
+
+export const categories = [
+  {
+    id: 1,
+    im: "../images/coat1.png",
+    title: "WINTER CLOTHINGS",  
+  },
+  {
+    id: 2,
+    im: "../images/phones.jpg",
+    title: "PHONES & ACCESSORIES",  
+  },
+  {
+    id: 3,
+    im: "../images/computers.jpg",
+    title: "LAPTOP & ACCESSORIES",  
+  },
+    
+]
