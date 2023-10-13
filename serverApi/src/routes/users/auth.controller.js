@@ -1,23 +1,23 @@
-const { saveUser, loginUser } = require('../../models/user.model')
+const { signupUser, loginUser } = require('../../models/user.model')
 const CryptoJS = require('crypto-js')
 
 // Signup new user
 async function httpPostSignup(req,res){
-  const signupUser = {
+  const newUser = {
     username: req.body.username,
     email: req.body.email,
     password: CryptoJS.AES.encrypt(req.body.password, process.env.SEC_KEY).toString()
   }
-  if(!signupUser.username || !signupUser.email || !signupUser.password) {   
+  if(!newUser.username || !newUser.email || !newUser.password) {   
 
     return res.status(400).json({
       error: 'Missing Required Signup Required Property',
     });
   }
 
-  await saveUser(signupUser);
+  await signupUser(newUser);
 
-  return res.status(201).json(signupUser);
+  return res.status(201).json(newUser);
 }
 
 //Login user

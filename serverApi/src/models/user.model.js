@@ -1,7 +1,8 @@
 const userData = require('./user.mongo')
 const CryptoJS = require('crypto-js')
+const jwt = require('jsonwebtoken')
 
-async function saveUser(user) {  
+async function saveUser(user) {
   return await userData.findOneAndUpdate({
     username: user.username,
     },
@@ -10,6 +11,18 @@ async function saveUser(user) {
       upsert: true,
     }
   )
+}
+
+async function upDatedUser(user) {
+  const upDateUser = await userData.findOneAndUpdate(user.email, {
+   $set: user,
+  }, {new: true})
+
+  return upDateUser
+}
+
+async function signupUser(user) {  
+  await saveUser(user)
 }
 
 async function loginUser(user){
@@ -26,12 +39,24 @@ async function loginUser(user){
   if (hashedPassword !== user.password ) {
     throw new Error('Wrong Password!');
   }
+
+  const accesstoken = jwt.sign(
+    {
+      id: loginUser.id,
+      isAdmin: loginUser.isAdmin,
+    },
+    process.env.JWT_SEC_KEY,
+    {
+      expiresIn: "3d"
+    }
+  )
   const { password, ...otherUserDetails} = loginUser._doc //return details without password
 
-  return otherUserDetails
+  return {...otherUserDetails, accesstoken}
 }
 
 module.exports = {
-  saveUser,
+  signupUser,
   loginUser,
+  upDatedUser
 }
