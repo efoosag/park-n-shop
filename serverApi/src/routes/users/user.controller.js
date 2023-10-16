@@ -1,4 +1,4 @@
-const {upDatedUser} = require('../../models/user.model')
+const {upDatedUser, findUserById, findAllusers, usersStatistics} = require('../../models/user.model');
 
 // Signup new user
 async function httpUpdateUser(req,res){
@@ -18,6 +18,35 @@ async function httpUpdateUser(req,res){
 
 }
 
+//Delete User
+async function httpDeleteUser(req, res) {
+  const result = await deleteUser(req.params.id)
+  return res.status(200).json(result)
+}
+
+//Get All Users 
+async function httpGetAllUsers(req, res) {
+  const query = req.query.new
+  const results = await findAllusers(query)
+  return res.status(200).json(results)
+}
+
+//Get User by Id 
+async function httpGetUser(req, res) {
+  const result = await findUserById(req.params.id)
+  return res.status(200).json(result)
+}
+
+//Get users statistics
+async function httpGetUsersStats(req, res) {  
+  const result = await usersStatistics()
+  return res.status(200).json(result)
+}
+
 module.exports = {
   httpUpdateUser,
+  httpDeleteUser,
+  httpGetUser,
+  httpGetAllUsers,
+  httpGetUsersStats
 }

@@ -32,7 +32,7 @@ async function httpLoginUser(req,res) {
   }
 
   const verifiedUser = await loginUser(user)
-
+   
   return res.status(201).json(verifiedUser)
 }
 
