@@ -34,7 +34,7 @@ async function findAllProducts(query){
   let products 
   try {     
     if(query[0]){
-      products = await productData.find().sort({createdAt: -1}).limit(1)
+      products = await productData.find().sort({createdAt: -1}).limit(5)
     }else if (query[1]){
       products = await productData.find({categories: {$in: [query[1]]}}).sort({_id: -1}).limit(5)
     }else{
