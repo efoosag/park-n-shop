@@ -10,7 +10,7 @@ const { cartsRouter } = require('./carts/carts.router')
 const { ordersRouter } = require('./orders/orders.router')
 
 api.use('/', authRouter)
-api.use('/payment', stripeRouter)
+api.use('/checkout', stripeRouter)
 api.use('/users',usersRouter)
 api.use('/products',productsRouter)
 api.use('/orders',ordersRouter)

@@ -4,8 +4,8 @@ const stripe = require('stripe')(process.env.STRIPE_KEY)
 
 const stripeRouter = express.Router();
 
-stripeRouter.post('/', (req, res) => {
-  stripe.charge.create(
+stripeRouter.post('/payment', (req, res) => {
+  stripe.charges.create(
     {
       source: req.body.tokenId,
       amount: req.body.amount,
@@ -15,7 +15,7 @@ stripeRouter.post('/', (req, res) => {
       if(stripeErr){
         res.status(500).json(stripeErr)
       } else {
-        res.status.json(stripeRes)
+        res.status(200).json(stripeRes)
       }
     }
   )
