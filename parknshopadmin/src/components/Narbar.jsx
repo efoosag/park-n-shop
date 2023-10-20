@@ -4,7 +4,7 @@ import { NotificationsNone, Language, Settings } from '@mui/icons-material';
 
 const Navigation = styled.div`
   width: 100vw;
-  height: 50px;
+  height: 60px;
   background-color: #fff;
   position: sticky;
   top: 0;
@@ -12,7 +12,7 @@ const Navigation = styled.div`
 `
 const Wrapper = styled.div`
   width: 100%;
-  padding: 20px;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
