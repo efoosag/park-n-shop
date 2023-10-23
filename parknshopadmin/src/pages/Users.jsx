@@ -6,6 +6,9 @@ import styled from 'styled-components';
 import { DeleteOutline } from '@mui/icons-material';
 import { userRows } from '../data';
 
+const Wrapper = styled.div`
+  flex: 4;
+`
 const User = styled.div`
   display: flex;
   align-items: center;
@@ -92,7 +95,7 @@ const Users = () => {
   ];
 
   return (
-    <div>
+    <Wrapper>
        <Box sx={{ height: 550, width: '100%' }}>
         <DataGrid
           rows={data}
@@ -110,7 +113,7 @@ const Users = () => {
           disableRowSelectionOnClick
         />
       </Box>
-    </div>
+    </Wrapper>
   )
 }
 
