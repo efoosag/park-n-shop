@@ -45,3 +45,76 @@ export const userData = [
     "Active User": 3490,    
   }, 
 ];
+
+export const userRows = [
+  { id: 1, 
+    username: 'Victor', 
+    profile_pic: '../../access/images/profile_pic.jpeg', 
+    email: 'efoosagsite@gmail.com', 
+    status: 'active', 
+    transaction: '$100.00' 
+  },
+  { id: 2, 
+    username: 'Victor', 
+    profile_pic: '../../access/images/profile_pic.jpeg', 
+    email: 'efoosagsite@gmail.com', 
+    status: 'active', 
+    transaction: '$110.00' 
+  },
+  { id: 3, 
+    username: 'Victor', 
+    profile_pic: '../../access/images/profile_pic.jpeg', 
+    email: 'efoosagsite@gmail.com', 
+    status: 'active', 
+    transaction: '$260.00' 
+  },
+  { id: 4, 
+    username: 'Victor', 
+    profile_pic: '../../access/images/profile_pic.jpeg', 
+    email: 'efoosagsite@gmail.com', 
+    status: 'active', 
+    transaction: '$135.00' 
+  },
+  { id: 5, 
+    username: 'Victor', 
+    profile_pic: '../../access/images/profile_pic.jpeg', 
+    email: 'efoosagsite@gmail.com', 
+    status: 'active', 
+    transaction: '$150.00' 
+  },
+  { id: 6, 
+    username: 'Victor', 
+    profile_pic: '../../access/images/profile_pic.jpeg', 
+    email: 'efoosagsite@gmail.com', 
+    status: 'active', 
+    transaction: '$120.00' 
+  },
+  { id: 7, 
+    username: 'Victor', 
+    profile_pic: '../../access/images/profile_pic.jpeg', 
+    email: 'efoosagsite@gmail.com', 
+    status: 'active', 
+    transaction: '$300.00' 
+  },
+  { id: 8, 
+    username: 'Victor', 
+    profile_pic: '../../access/images/profile_pic.jpeg', 
+    email: 'efoosagsite@gmail.com', 
+    status: 'active', 
+    transaction: '$160.00' 
+  },
+  { id: 9, 
+    username: 'Victor', 
+    profile_pic: '../../access/images/profile_pic.jpeg', 
+    email: 'efoosagsite@gmail.com', 
+    status: 'active', 
+    transaction: '$200.00' 
+  },
+  { id: 10, 
+    username: 'Victor', 
+    profile_pic: '../../access/images/profile_pic.jpeg', 
+    email: 'efoosagsite@gmail.com', 
+    status: 'active', 
+    transaction: '$240.00' 
+  },  
+];
