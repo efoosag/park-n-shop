@@ -7,6 +7,7 @@ import { DeleteOutline } from '@mui/icons-material';
 import { userRows } from '../data';
 
 const Wrapper = styled.div`
+  padding: 20px;
   flex: 4;
 `
 const User = styled.div`
@@ -47,7 +48,7 @@ const Users = () => {
     {
       field: 'user',
       headerName: 'User',
-      width: 150,
+      width: 200,
       editable: true,
       renderCell: (params) => {
         return (
@@ -61,13 +62,13 @@ const Users = () => {
     {
       field: 'email',
       headerName: 'Email',
-      width: 200,
+      width: 250,
       editable: true,
     },
     {
       field: 'status',
       headerName: 'Status',    
-      width: 110,
+      width: 160,
       editable: true,
     },
     {

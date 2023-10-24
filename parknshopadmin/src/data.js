@@ -118,3 +118,76 @@ export const userRows = [
     transaction: '$240.00' 
   },  
 ];
+
+export const productRows = [
+  { id: 1, 
+    name: 'Phone 1', 
+    imag: '../../access/images/phone1.jpg', 
+    stock: 100, 
+    status: 'active', 
+    price: '$100.00' 
+  },
+  { id: 2, 
+    name: 'Phone 2', 
+    imag: '../../access/images/phone2.jpg', 
+    stock: 130, 
+    status: 'active', 
+    price: '$120.00'  
+  },
+  { id: 3, 
+    name: 'Phone 3', 
+    imag: '../../access/images/phone3.jpg', 
+    stock: 90, 
+    status: 'active', 
+    price: '$100.00'  
+  },
+  { id: 4, 
+    name: 'Phone 4', 
+    imag: '../../access/images/phone4.jpg', 
+    stock: 400, 
+    status: 'active', 
+    price: '$300.00'  
+  },
+  { id: 5, 
+    name: 'Cable', 
+    imag: '../../access/images/cable.jpg', 
+    stock: 1000, 
+    status: 'active', 
+    price: '$10.00'  
+  },
+  { id: 6, 
+    name: 'Laptop 1', 
+    imag: '../../access/images/laptop1.jpg', 
+    stock: 50, 
+    status: 'active', 
+    price: '$1000.00'  
+  },
+  { id: 7, 
+    name: 'Laptop 2', 
+    imag: '../../access/images/laptop2.jpg', 
+    stock: 30, 
+    status: 'active', 
+    price: '$1500.00'  
+  },
+  { id: 8, 
+    name: 'Laptop 3', 
+    imag: '../../access/images/laptop3.jpg', 
+    stock: 100, 
+    status: 'active', 
+    price: '$1000.00'  
+  },
+  { id: 9, 
+    name: 'Laptop 4', 
+    imag: '../../access/images/laptop4.jpg', 
+    stock: 10, 
+    status: 'active', 
+    price: '$2000.00'  
+  },
+  { id: 10, 
+    name: 'Laptop 5', 
+    imag: '../../access/images/laptop5.jpg', 
+    stock: 20, 
+    status: 'active', 
+    price: '$850.00'  
+  },  
+];
