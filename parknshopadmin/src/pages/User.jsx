@@ -1,5 +1,6 @@
 import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid, Publish } from '@mui/icons-material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -150,7 +151,9 @@ const User = () => {
       <UserTitleContainer>
         <UserWrapperTitle>
           <UserTitle>Edit User</UserTitle>
-          <UserTitleButton>Create</UserTitleButton>
+          <Link to="/new_user">
+            <UserTitleButton>Create</UserTitleButton>
+          </Link>          
         </UserWrapperTitle>        
         <UserWrapper>
           <UserLeft>

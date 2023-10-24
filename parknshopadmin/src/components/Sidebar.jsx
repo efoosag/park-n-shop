@@ -1,5 +1,6 @@
 import { AttachMoney, DynamicFeed, Equalizer, InventoryOutlined, LineStyle, MailOutline, Message, Person2Outlined, Report, Timeline, TrendingUp, WorkOutlined } from '@mui/icons-material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 
@@ -46,10 +47,12 @@ const Sidebar = () => {
         <SideItemContainer>
           <SideItemTitle>Dashboard</SideItemTitle>
           <SideItem>
-            <SideItemList type="active">
-              <LineStyle style={{fontSize: '20px', marginRight: '5px'}}/> 
-              Home
-            </SideItemList>
+            <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
+              <SideItemList type="active" >
+                <LineStyle style={{fontSize: '20px', marginRight: '5px'}}/> 
+                Home
+              </SideItemList>
+            </Link>            
             <SideItemList>
               <Timeline style={{fontSize: '20px', marginRight: '5px'}}/>
               Analytics
@@ -63,14 +66,18 @@ const Sidebar = () => {
         <SideItemContainer>
           <SideItemTitle>Quick Menu</SideItemTitle>
           <SideItem>
-            <SideItemList>
-              <Person2Outlined style={{fontSize: '20px', marginRight: '5px'}}/> 
-              Users
-            </SideItemList>
-            <SideItemList>
-              <InventoryOutlined style={{fontSize: '20px', marginRight: '5px'}}/>
-              Products
-            </SideItemList>
+            <Link to="/users" style={{textDecoration: 'none', color: 'inherit'}}>
+              <SideItemList>
+                <Person2Outlined style={{fontSize: '20px', marginRight: '5px'}}/> 
+                Users
+              </SideItemList> 
+            </Link> 
+            <Link to="/products" style={{textDecoration: 'none', color: 'inherit'}}>
+              <SideItemList>
+                <InventoryOutlined style={{fontSize: '20px', marginRight: '5px'}}/>
+                Products
+              </SideItemList>
+            </Link>             
             <SideItemList>
               <AttachMoney style={{fontSize: '20px', marginRight: '5px'}}/>
               Transactions

@@ -17,6 +17,8 @@ const WidgetTable = styled.table`
   width: 100%;  
   border-spacing: 20px;
 `
+const WidgetThead = styled.thead``
+const WidgetTbody = styled.tbody``
 const WidgetTr = styled.tr``
 const WidgetTh = styled.th`
   text-align: left;
@@ -50,77 +52,81 @@ const HomeWidgetRight = () => {
     <Wrapper>
       <WidgetTableTitle>Customer's Latest Transactions</WidgetTableTitle>
       <WidgetTable>
-        <WidgetTr>
-          <WidgetTh>Customer</WidgetTh>
-          <WidgetTh>Date</WidgetTh>
-          <WidgetTh>Amount</WidgetTh>
-          <WidgetTh>Status</WidgetTh>
-        </WidgetTr>
-        <WidgetTr>
-          <WidgetTd>
-            <WidgetUserDetails>
-              <WidgetImage src='../../access/images/profile_pic.jpeg'/>
-              <WidgetUser>Victor</WidgetUser>
-            </WidgetUserDetails>
-          </WidgetTd>
-          <WidgetTd>2 Jan 2030</WidgetTd>
-          <WidgetTd>$12,000.00</WidgetTd>
-          <WidgetTd>
-            <WidgetButton type="Approved">Approved</WidgetButton>
-          </WidgetTd>
-        </WidgetTr>
-        <WidgetTr>
-          <WidgetTd>
-            <WidgetUserDetails>
-              <WidgetImage src='../../access/images/profile_pic.jpeg'/>
-              <WidgetUser>Victor</WidgetUser>
-            </WidgetUserDetails>
-          </WidgetTd>
-          <WidgetTd>2 Jan 2030</WidgetTd>
-          <WidgetTd>$12,000.00</WidgetTd>
-          <WidgetTd>
-            <WidgetButton type="Declined">Declined</WidgetButton>
-          </WidgetTd>
-        </WidgetTr>
-        <WidgetTr>
-          <WidgetTd>
-            <WidgetUserDetails>
-              <WidgetImage src='../../access/images/profile_pic.jpeg'/>
-              <WidgetUser>Victor</WidgetUser>
-            </WidgetUserDetails>
-          </WidgetTd>
-          <WidgetTd>2 Jan 2030</WidgetTd>
-          <WidgetTd>$12,000.00</WidgetTd>
-          <WidgetTd>
-            <WidgetButton type="Pending">Pending</WidgetButton>
-          </WidgetTd>
-        </WidgetTr>
-        <WidgetTr>
-          <WidgetTd>
-            <WidgetUserDetails>
-              <WidgetImage src='../../access/images/profile_pic.jpeg'/>
-              <WidgetUser>Victor</WidgetUser>
-            </WidgetUserDetails>
-          </WidgetTd>
-          <WidgetTd>2 Jan 2030</WidgetTd>
-          <WidgetTd>$12,000.00</WidgetTd>
-          <WidgetTd>
-            <WidgetButton type="Approved">Approved</WidgetButton>
-          </WidgetTd>
-        </WidgetTr>
-        <WidgetTr>
-          <WidgetTd>
-            <WidgetUserDetails>
-              <WidgetImage src='../../access/images/profile_pic.jpeg'/>
-              <WidgetUser>Victor</WidgetUser>
-            </WidgetUserDetails>
-          </WidgetTd>
-          <WidgetTd>2 Jan 2030</WidgetTd>
-          <WidgetTd>$12,000.00</WidgetTd>
-          <WidgetTd>
-            <WidgetButton type="Pending">Pending</WidgetButton>
-          </WidgetTd>
-        </WidgetTr>
+        <WidgetThead>
+          <WidgetTr>
+            <WidgetTh>Customer</WidgetTh>
+            <WidgetTh>Date</WidgetTh>
+            <WidgetTh>Amount</WidgetTh>
+            <WidgetTh>Status</WidgetTh>
+          </WidgetTr>
+        </WidgetThead>
+        <WidgetTbody>
+          <WidgetTr>
+            <WidgetTd>
+              <WidgetUserDetails>
+                <WidgetImage src='../../access/images/profile_pic.jpeg'/>
+                <WidgetUser>Victor</WidgetUser>
+              </WidgetUserDetails>
+            </WidgetTd>
+            <WidgetTd>2 Jan 2030</WidgetTd>
+            <WidgetTd>$12,000.00</WidgetTd>
+            <WidgetTd>
+              <WidgetButton type="Approved">Approved</WidgetButton>
+            </WidgetTd>
+          </WidgetTr>
+          <WidgetTr>
+            <WidgetTd>
+              <WidgetUserDetails>
+                <WidgetImage src='../../access/images/profile_pic.jpeg'/>
+                <WidgetUser>Victor</WidgetUser>
+              </WidgetUserDetails>
+            </WidgetTd>
+            <WidgetTd>2 Jan 2030</WidgetTd>
+            <WidgetTd>$12,000.00</WidgetTd>
+            <WidgetTd>
+              <WidgetButton type="Declined">Declined</WidgetButton>
+            </WidgetTd>
+          </WidgetTr>
+          <WidgetTr>
+            <WidgetTd>
+              <WidgetUserDetails>
+                <WidgetImage src='../../access/images/profile_pic.jpeg'/>
+                <WidgetUser>Victor</WidgetUser>
+              </WidgetUserDetails>
+            </WidgetTd>
+            <WidgetTd>2 Jan 2030</WidgetTd>
+            <WidgetTd>$12,000.00</WidgetTd>
+            <WidgetTd>
+              <WidgetButton type="Pending">Pending</WidgetButton>
+            </WidgetTd>
+          </WidgetTr>
+          <WidgetTr>
+            <WidgetTd>
+              <WidgetUserDetails>
+                <WidgetImage src='../../access/images/profile_pic.jpeg'/>
+                <WidgetUser>Victor</WidgetUser>
+              </WidgetUserDetails>
+            </WidgetTd>
+            <WidgetTd>2 Jan 2030</WidgetTd>
+            <WidgetTd>$12,000.00</WidgetTd>
+            <WidgetTd>
+              <WidgetButton type="Approved">Approved</WidgetButton>
+            </WidgetTd>
+          </WidgetTr>
+          <WidgetTr>
+            <WidgetTd>
+              <WidgetUserDetails>
+                <WidgetImage src='../../access/images/profile_pic.jpeg'/>
+                <WidgetUser>Victor</WidgetUser>
+              </WidgetUserDetails>
+            </WidgetTd>
+            <WidgetTd>2 Jan 2030</WidgetTd>
+            <WidgetTd>$12,000.00</WidgetTd>
+            <WidgetTd>
+              <WidgetButton type="Pending">Pending</WidgetButton>
+            </WidgetTd>
+          </WidgetTr>
+        </WidgetTbody>        
       </WidgetTable>
     </Wrapper>
   )
