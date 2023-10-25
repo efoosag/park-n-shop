@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   flex: 4;
   padding: 20px;
 `
-const NewUserTitle = styled.h3`
+const NewUserTitle = styled.h1`
   font-size: 30px;
 `
 const Form = styled.form`
@@ -64,13 +64,11 @@ const FormButton = styled.button`
   cursor: pointer;
   border-radius: 10px;
   font-weight: 600;
-
 `
-
 const NewUser = () => {
   return (
     <Wrapper>
-      <NewUserTitle> Edit User</NewUserTitle>
+      <NewUserTitle>New User</NewUserTitle>
       <Form>
         <FormItem>                
           <Item>

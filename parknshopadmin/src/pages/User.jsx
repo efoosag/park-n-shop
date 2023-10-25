@@ -14,8 +14,7 @@ const UserWrapperTitle = styled.div`
   align-items: center;
   justify-content: space-between;
 `
-const UserTitle  = styled.h3`
-  font-size: 30px;
+const UserTitle  = styled.h1`  
 `
 const UserTitleButton  = styled.button`
   padding: 5px 20px;

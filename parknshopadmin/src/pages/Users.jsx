@@ -73,7 +73,7 @@ const Users = () => {
     },
     {
       field: 'transaction',
-      headerName: 'transaction',
+      headerName: 'Transaction',
       description: 'This column has a value getter and is not sortable.',
       sortable: false,
       width: 160,    

@@ -4,8 +4,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 
 
 const ChartContainer = styled.div`
-  padding: 20px;
-  margin: 20px;
+  padding: 20px;  
   box-shadow: 6px 7px 24px -10px rgba(0,0,0,0.75);
   -webkit-box-shadow: 6px 7px 24px -10px rgba(0,0,0,0.75);
   -moz-box-shadow: 6px 7px 24px -10px rgba(0,0,0,0.75);
