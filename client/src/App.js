@@ -1,27 +1,26 @@
-import { BrowserRouter, Routes, Route} from "react-router-dom";
-// import Homepage from "./pages/Homepage";
-// import ProductList from "./pages/ProductList";
-// import Product from "./pages/Product";
-// import Signup from "./pages/Signup";
-// import Login from "./pages/Login";
-// import Cart from "./pages/Cart";
+import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import ProductList from "./pages/ProductList";
+import Product from "./pages/Product";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import Cart from "./pages/Cart";
 import Pay from "./pages/Pay";
 import Success from "./pages/Success";
 
 function App() {
-  return (
-    // <div>
-    //   {/* <Homepage/> */}
-    //   {/* <ProductList /> */}
-    //   {/* <Product /> */}
-    //   {/* <Signup /> */}
-    //   {/* <Login /> */}
-    //   {/* <Cart /> */}
-    // </div>
+  const user = true;
+  return (   
     <BrowserRouter>
       <Routes>
-        <Route exact path="/pay" element={<Pay />} />
-        <Route exact path="/success" element={<Success />} />
+        <Route exact path="/" element={<Homepage />} />        
+        <Route path="/products/:catetory" element={<ProductList />} />
+        <Route path="/product/:id" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/signup" element={user ? <Navigate  to="/" /> :<Signup />} />
+        <Route path="/login" element={user ? <Navigate  to="/" /> :<Login />} />
+        <Route path="/pay" element={<Pay />} />
+        <Route path="/success" element={<Success />} />
       </Routes>
     </BrowserRouter>
   );
