@@ -18,6 +18,7 @@ const Info = styled.div`
 
 const Container = styled.div`
   flex: 1;
+  flex-wrap: wrap;
   margin: 5px;
   width: 280px;
   height: 350px;
@@ -38,7 +39,17 @@ const Circle = styled.div`
   background-color: white;
   position: absolute;
 `
+const Price = styled.span`
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  font-weight: 600;
+  font-size: 18px;
+`
+
 const Image = styled.img`
+  width: 280px;
   height: 60%;
   z-index: 2;
 `
@@ -61,12 +72,11 @@ const Icon = styled.div`
   }
 `
 
-
 const Product = ({ item }) => {
   return (
     <Container>      
       <Circle />
-      <Image src={item.im} />
+      <Image src={item.img} />
       <Info>
         <Icon>
           <ShoppingCartOutlined />
@@ -78,7 +88,7 @@ const Product = ({ item }) => {
           <FavoriteBorderOutlined />
         </Icon>
       </Info>
-
+      <Price>${item.price}</Price>
     </Container>
   )
 }

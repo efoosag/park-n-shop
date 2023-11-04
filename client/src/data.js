@@ -40,17 +40,20 @@ export const categories = [
   {
     id: 1,
     im: "../images/coat1.png",
-    title: "WINTER CLOTHINGS",  
+    title: "WINTER CLOTHINGS", 
+    cat: "unisex", 
   },
   {
     id: 2,
     im: "../images/phones.jpg",
     title: "PHONES & ACCESSORIES",  
+    cat: "men", 
   },
   {
     id: 3,
     im: "../images/computers.jpg",
-    title: "LAPTOP & ACCESSORIES",  
+    title: "LAPTOP & ACCESSORIES",
+    cat: "laptop",   
   },    
 ]
 

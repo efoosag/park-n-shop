@@ -8,7 +8,7 @@ const productsRouter = express.Router()
 productsRouter.post('/', verifyTokenAndIsAdmin, httpAddNewProduct) // add new product
 productsRouter.put('/:id', verifyTokenAndIsAdmin, httpUpdateProduct) // update product
 productsRouter.delete('/:id', verifyTokenAndIsAdmin, httpDeleteProduct) // delete product
-productsRouter.get('/', verifyTokenAndIsAdmin, httpGetAllProducts) // get all product
+productsRouter.get('/', httpGetAllProducts) // get all product
 productsRouter.get('/:id', httpGetProduct) // get unique product
 
 module.exports = {
