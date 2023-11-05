@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import Navbar from '../components/Navbar'
 import Announcement from '../components/Announcement'
@@ -6,6 +6,8 @@ import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
 import { Add, Remove } from '@mui/icons-material'
 import {mobile} from '../responsive'
+import { useLocation } from 'react-router-dom'
+import { publicRequest } from '../httpRequestMethods'
 
 const Container = styled.div``
 
@@ -117,44 +119,72 @@ const Button = styled.button`
 `
 
 const Product = () => {
+  const location = useLocation()
+  const id = location.pathname.split("/")[2]  
+  const [product, setProduct] = useState([])
+  const [quantity, setQuantity] = useState(1)
+  const [color, setColor] = useState(null)
+  const [size, setSize] = useState(null)
+
+  const handleQuantity = (type) => {
+    if(type === "decrease"){
+      quantity > 1 && setQuantity(quantity - 1)
+    }else{
+      setQuantity(quantity + 1)
+    }
+  } 
+
+  const handleClick = () => {
+    console.log(size, color, quantity, product)
+  }
+
+  useEffect(() => { 
+    const getProduct = async() => {      
+      try{        
+        const res = await publicRequest.get(`/products/${id}`)
+        console.log(res.data)  
+        setProduct(res.data)                    
+      } catch(err){
+        console.log(err)
+      }
+    }   
+    getProduct()    
+  },[id])
   return (
     <Container>
       <Navbar />
       <Announcement />
       <Wrapper>
         <ImageContainer>
-          <Image src='../images/coat1.png' />
+          <Image src={product.img} />
         </ImageContainer>
         <InfoContainer>
-          <Title>Rain Coat</Title>
-          <Description>Lorem a test paragraph  for web development have been pirated over time. Lorem a test paragraph  for web development have been pirated over time. Lorem a test paragraph  for web development have been pirated over time. Lorem a test paragraph  for web development have been pirated over time. </Description>
+          <Title>{product.title}</Title>
+          <Description>{product.desc}</Description>
           <Price>$ 20</Price>
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>
-              <FilterColor color="black" />
-              <FilterColor color="blue" />
-              <FilterColor color="red" />
+              {product.color &&
+                product.color.map(c => <FilterColor color={c} key={c} onClick={() => setColor(c)}/>)
+              }                                      
             </Filter>
             <Filter>
               <FilterTitle>Size</FilterTitle>
-              <FilterSize>
-                <FilterSizeOption>XS</FilterSizeOption>
-                <FilterSizeOption>S</FilterSizeOption>
-                <FilterSizeOption>M</FilterSizeOption>
-                <FilterSizeOption>L</FilterSizeOption>
-                <FilterSizeOption>XL</FilterSizeOption>
+              <FilterSize onChange={e => setSize(e.target.value)}>
+              {product.size &&
+                product.size.map(s => <FilterSizeOption key={s}>{s}</FilterSizeOption>   )
+              }                 
               </FilterSize>
-
             </Filter>
           </FilterContainer>
           <AddContainer>
             <AmountContainer>
-              <Remove />
-              <Amount>1</Amount>
-              <Add />
+              <Remove onClick={() => handleQuantity("decrease")}  style={{cursor: "pointer"}}/>
+              <Amount>{quantity}</Amount>
+              <Add onClick={() => handleQuantity("increase")} style={{cursor: "pointer"}}/>
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>

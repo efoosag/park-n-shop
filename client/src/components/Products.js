@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
-import { BASEURL } from '../callUrl/ProductsUrl'
-// import { popularProducts } from '../data'
 import Product from './Product'
 
 
@@ -24,8 +22,10 @@ const Products = ({cat, sort, filters}) => {
 
   useEffect(() => { 
     const getProducts = async(category) => {
+      const BASEURL = "http://localhost:4000/v1/"
       try{
-        const res = await axios.get(category ? `${BASEURL}/products?category=${category}`: `${BASEURL}/products`)  
+        const res = await axios.get(category ? `${BASEURL}/products?category=${category}`: `${BASEURL}/products`)
+        console.log(res.data)  
         setProducts(res.data)           
       } catch(err){
         console.log(err)
